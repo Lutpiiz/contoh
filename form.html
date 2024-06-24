@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body class="bg-body-tertiary">
+    <div class="container">
+        <!-- ini awal header -->
+        <header>
+            <div class="row text-center text-md-start">
+                <a href="index.html" class="link-body-emphasis link-underline-opacity-0">
+                    <div class="fs-1">
+                        BOOTSTRAP
+                    </div>
+                </a>
+            </div>
+            <hr>
+        </header>
+        <!-- ini akhir header -->
+
+        <!-- ini awal main -->
+        <main>
+            <!-- hero section -->
+            <div class="py-5 text-center">
+                <div class="card-body">
+                    <h2>Contoh Formulir Pemesanan Barang</h2>
+                    <p>Berikut ini adalah contoh formulir pemesanan barang yang dibuat dengan beberapa
+                        komponen form Bootstrap. Setiap Komponen.
+                        membutuhkan vakdasi agar formulir online ini bisa disubmit tanpa terjadi salah input.</p>
+                    <a href="index.html" class="btn btn-primary rounded-5 p-2">kembali ke halaman sebelumnya</a>
+                </div>
+            </div>
+            <!-- akhir hero section -->
+
+            <!-- form pembayaran -->
+            <!-- terdiri dari 1 row dan 2col(sm=5-7 lg=4-8) -->
+            <div class="row g-5">
+                <!-- detail produk dan harga -->
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <!-- Label with badge -->
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">Keranjang Belanja</span>
+                        <span class="badge bg-primary rounded-pill">3</span>
+                    </h4>
+                    <!-- akhir label with badge -->
+                    <!-- list item -->
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Kopi Arabika Gayo</h6>
+                                <small class="text-body-secondary">Biji kopi 200 gram</small>
+                            </div>
+                            <span class="text-body-secondary">Rp. 120.000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Kopi Arabika Flores Bajawa</h6>
+                                <small class="text-body-secondary">Biji kopi 200 gram</small>
+                            </div>
+                            <span class="text-body-secondary">Rp. 130.000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Kopi Arabika Gunung Halu</h6>
+                                <small class="text-body-secondary">Biji kopi 200 gram</small>
+                            </div>
+                            <span class="text-body-secondary">Rp. 125.000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                            <div class="text-success">
+                                <h6 class="my-0">Kode Promo</h6>
+                                <small>KUPONKOPI</small>
+                            </div>
+                            <span class="text-success">-Rp. 75.000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong>Rp. 300.000</strong>
+                        </li>
+                    </ul>
+                    <!-- akhir list item -->
+                    <!-- form kode promo -->
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Kode promo">
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                        </div>
+                    </form>
+                    <!-- akhir form kode promo -->
+                </div>
+                <!-- akhir detail produk dan harga -->
+
+                <!-- alamat billing -->
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Alamat billing</h4>
+                    <!-- form dengan validasi -->
+                    <form class="butuh-validasi" novalidate>
+                        <!-- 1 row dan 8 col -->
+                        <div class="row g-3">
+                            <!-- nama depan -->
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Nama depan</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Nama depan harus diisi.
+                                </div>
+                            </div>
+                            <!-- nama belakang -->
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Nama belakang</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Nama belakang harus diisi.
+                                </div>
+                            </div>
+                            <!-- username -->
+                            <div class="col-12">
+                                <label for="username" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input type="text" class="form-control" id="username" placeholder="Username"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        username harus diisi.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- email(opsional) -->
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email <span
+                                        class="text-body-secondary">(Opsional)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="contoh@emailku.com">
+                                <div class="invalid-feedback">
+                                    Tolong masukkan alamat email yang valid.
+                                </div>
+                            </div>
+                            <!-- alamat -->
+                            <div class="col-12">
+                                <label for="address" class="form-label">Alamat</label>
+                                <input type="text" class="form-control" id="address"
+                                    placeholder="contoh: perumahan Pondok Permai 84" required>
+                                <div class="invalid-feedback">
+                                    Alamat harus diisi.
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="country" class="form-label">Kota/Kabupaten</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="">Pilih...</option>
+                                    <option>Situbondo</option>
+                                    <option>Sleman</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Pilih Kota/Kabupaten yang sesuai
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">Provinsi</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">Pilih...</option>
+                                    <option>Jawa Timur</option>
+                                    <option>Yogyakarta</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Pilih Provinsi yang sesuai.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="zip" class="form-label">Kode Pos</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Kode pos harus diisi.
+                                </div>
+                            </div>
+                            <!-- akhir alamat -->
+                        </div>
+
+                        <hr class="my-4"> <!-- garis -->
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="same-address">
+                            <label class="form-check-label" for="same-address">Alamat Pengiriman sama dengan alamat
+                                billing.</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="save-info">
+                            <label class="form-check-label" for="save-info">Simpan Informasi ini untuk
+                                Selanjutnya.</label>
+                        </div>
+
+                        <hr class="my-4"><!-- garis -->
+                        <!-- awal detail pembayaran -->
+                        <h4 class="mb-3">Pembayaran</h4>
+                        <div class="my-3">
+                            <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
+                                    required>
+                                <label class="form-check-label" for="credit">Kartu kredit</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">Kartu debit</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
+                        </div>
+                        <!-- 1 row 4 col -->
+                        <div class="row gy-3">
+                            <div class="col-md-6">
+                                <label for="cc-name" class="form-label">Nama pemilik kartu</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                <small class="text-body-secondary">masukkan nama lengkap yang tertera pada
+                                    kartu.</small>
+                                <div class="invalid-feedback">
+                                    Nama lengkap harus sesuai.
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cc-number" class="form-label">Nomor kartu kredit</label>
+                                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Nomor kartu kredit harus diisi.
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="cc-expiration" class="form-label">Masa kadaluarsa</label>
+                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Masa kadaluarsa wajib di isi.
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="cc-cvv" class="form-label">Kode CVV</label>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Kode CVV wajib diisi.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- akhir alamat billing -->
+                        <hr class="my-4">
+                        <!-- tombol submit -->
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Proses Pembayaran</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!-- ini akhir main -->
+
+        <!-- ini awal footer -->
+        <footer class="mt-5">
+            <div class="fs-6">@ 2023 Praktikum 11 - Pengenalan Perancangan Web | Handika Attha Maulana - 22.12.2638</div>
+        </footer>
+        <!-- ini akhir footer -->
+    </div>
+    <script src="checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
